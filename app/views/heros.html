@@ -1,0 +1,42 @@
+<h1>{{title}}</h1>
+<h2>My Favorite hero is: {{myHero}}</h2>
+<p>Heroes:</p>
+<ul>
+    <li *ngFor="let hero of heroes">{{hero}}</li>
+</ul>
+
+<hr>
+
+<h2>响应点击事件</h2>
+<button (click)="onClickMe()">Click me!</button>
+<p>{{clickMessage}}</p>
+
+
+<hr>
+
+<h2>监听输入框事件</h2>
+<input type="text" (keyup)="onKeyUp($event)">
+<p>{{values}}</p>
+
+<hr>
+
+<input #box type="text" (keyup)="0">
+<p>{{box.value}}</p>
+
+
+<hr>
+
+<h2></h2>
+<input #box2 type="text" (keyup)="onKeyUp2(box2.value)">
+<p>{{values2}}</p>
+
+
+<hr>
+
+<h2>回车事件</h2>
+<input #box3 type="text" (keyup.enter)="onKeyUpEnter3(box3.value)">
+
+<hr>
+
+<h2>失焦事件</h2>
+<input #box4 type="text" (blur)="onBlur(box4.value)">
